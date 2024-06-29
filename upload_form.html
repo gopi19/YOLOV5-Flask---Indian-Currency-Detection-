@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fake Currency Detector</title>
+    <style>
+      body {
+        background-color: #ffe9d0;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      .container {
+        background: #fefae0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 40px;
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+      }
+
+      h1 {
+        color: #d4a373;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .file-upload {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        line-height: 50px;
+        overflow: hidden;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #ff8c00;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+      }
+
+      .file-upload input[type="file"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+
+      .file-upload:hover {
+        background-color: #ffa500;
+      }
+
+      .submit-btn {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .submit-btn:hover {
+        background-color: #45a049;
+      }
+
+      .file-name {
+        margin-top: 10px;
+        color: #555;
+        font-size: 14px;
+      }
+
+      .image-preview {
+        margin-top: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-preview img {
+        max-width: 100%;
+        max-height: 200px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload an Image</h1>
+      <form action="/upload" method="post" enctype="multipart/form-data">
+        <div class="file-upload">
+          <span>Choose an image</span>
+          <input
+            type="file"
+            name="file"
+            accept="image/jpeg, image/png"
+            required
+            onchange="showPreview(event)"
+          />
+        </div>
+        <button type="submit" class="submit-btn">Upload</button>
+        <div class="image-preview" id="image-preview">
+          <img id="preview-img" src="" alt="Image Preview" />
+          <div class="file-name" id="file-name"></div>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function showPreview(event) {
+        var input = event.target;
+        var fileName = input.files[0].name;
+        var fileNameDiv = document.getElementById("file-name");
+        var previewImg = document.getElementById("preview-img");
+        var previewDiv = document.getElementById("image-preview");
+
+        var reader = new FileReader();
+        reader.onload = function () {
+          previewImg.src = reader.result;
+          previewDiv.style.display = "flex";
+        };
+        reader.readAsDataURL(input.files[0]);
+
+        fileNameDiv.textContent = "Selected file: " + fileName;
+      }
+    </script>
+  </body>
+</html>
