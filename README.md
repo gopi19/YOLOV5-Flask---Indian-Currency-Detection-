@@ -2,6 +2,23 @@
 This Flask application, utilizing fully functional YOLOv5 weights, allows users to upload images of currency. The model processes these images, performing inferences and annotating the detected elements, subsequently displaying the final annotated image.
 
 
+#File Structure
+proj-folder
+|
+|--yolov5
+     |...
+     |...
+     |--templates
+           |-upload_form.html
+           
+     |--static
+           |--styles
+                |-styles.css
+           |--js
+               |-static.js
+     |-app.py
+
+
 # Process to run
 1) Ensure that the file structure shown above is maintained strictly.
 2) Make sure you are in the yolov5 folder. If not ```cd yolov5```
