@@ -15,6 +15,7 @@ proj-folder/yolov5
                 |-styles.css
            |--js
                |-static.js
+     |-req.txt
      |-app.py
 
 
