@@ -11,7 +11,7 @@ proj-folder/yolov5
      |--templates
            |-upload_form.html          
      |--static
-           |--styles
+           |--css
                 |-styles.css
            |--js
                |-static.js
