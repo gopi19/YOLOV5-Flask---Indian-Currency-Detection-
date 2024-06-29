@@ -3,14 +3,16 @@ This Flask application, utilizing fully functional YOLOv5 weights, allows users 
 
 
 #File Structure
+
 proj-folder
 |
+
 |--yolov5
+
      |...
      |...
      |--templates
-           |-upload_form.html
-           
+           |-upload_form.html          
      |--static
            |--styles
                 |-styles.css
