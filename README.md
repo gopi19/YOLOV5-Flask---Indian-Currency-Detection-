@@ -16,8 +16,11 @@ proj-folder/yolov5
            |--js
                |-static.js
      |-req.txt
+     |-best_final.pt
      |-app.py
 
+# WEIGHTS INSTALLATION - IMP
+Download the weights file from [this link](https://drive.google.com/file/d/1jpBarN5lrwQdcYlXvKu1x9_ps--44g7l/view?usp=drive_link). Please name it in the cnvention as stated above - ```best_final.pt```
 
 # Process to run
 1) Ensure that the file structure shown above is maintained strictly.
