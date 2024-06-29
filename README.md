@@ -31,3 +31,7 @@ Download the weights file from [this link](https://drive.google.com/file/d/1jpBa
 6) You will find the link to webpage. Click and run the app. 
 
 Cheers!
+
+
+## NOTE:
+If the above file structure seems confusing and occasionaly not working, find the full structure to the project [here](https://drive.google.com/drive/folders/1Sp7u4OGHO46zFXu1m57_kTs5a_wjcwcC). Find the main content of this project in ```yolov5``` directory.
