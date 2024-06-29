@@ -4,10 +4,7 @@ This Flask application, utilizing fully functional YOLOv5 weights, allows users 
 
 #File Structure
 
-proj-folder<br />
-|<br />
-
-|--yolov5
+proj-folder/yolov5
 
      |...
      |...
